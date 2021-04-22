@@ -70,8 +70,8 @@ async def see_info(message: Message):
         )
         plugin_link = f"{extra_plugins}/{plugin_name}.py"
     elif plugin_loc == "/custom":
-        custom_plugins = Config.CUSTOM_PLUGINS_REPO
-        plugin_link = f"{custom_plugins}/blob/master/plugins/{plugin_name}.py"
+        custom_plugins = Config.CUSTOM_PLUGINS_REPO + "/blob/master/plugins"
+        plugin_link = f"{custom_plugins}/{plugin_name}.py"
     elif plugin_loc == "/temp":
         plugin_link = False
     else:
